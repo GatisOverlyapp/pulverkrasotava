@@ -2,7 +2,8 @@ import Image from 'next/image';
 
 interface TextWithImageProps {
   title?: string;
-  content: React.ReactNode;
+  content?: React.ReactNode;
+  children?: React.ReactNode;
   image: string;
   imageAlt?: string;
   imagePosition?: 'left' | 'right';
@@ -12,11 +13,13 @@ interface TextWithImageProps {
 export default function TextWithImage({
   title,
   content,
+  children,
   image,
   imageAlt = '',
   imagePosition = 'right',
   className = '',
 }: TextWithImageProps) {
+  const textContent = content || children;
   return (
     <section className={`bg-pulver-dark section-padding ${className}`}>
       <div className="container">
@@ -33,7 +36,7 @@ export default function TextWithImage({
               </h2>
             )}
             <div className="text-pulver-white leading-relaxed space-y-4">
-              {content}
+              {textContent}
             </div>
           </div>
 
