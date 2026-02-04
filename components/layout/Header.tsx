@@ -19,7 +19,6 @@ const navigation = [
   { name: 'Par mums', href: '/par-mums' },
   { name: 'Pakalpojumi', href: '/pakalpojumi', hasDropdown: true },
   { name: 'Informācija', href: '/informacija' },
-  { name: 'Cenas', href: '/cenas' },
   { name: 'Kontakti', href: '/kontakti' },
 ];
 

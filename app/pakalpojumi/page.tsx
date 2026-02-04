@@ -95,14 +95,9 @@ export default function ServicesPage() {
             <p className="text-pulver-text mb-8">
               Sazinieties ar mums, lai apspriestu savu projektu un saņemtu bezmaksas konsultāciju.
             </p>
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-              <Link href="/kontakti" className="btn btn-primary">
-                Sazināties ar mums
-              </Link>
-              <Link href="/cenas" className="btn btn-secondary">
-                Apskatīt cenas
-              </Link>
-            </div>
+            <Link href="/kontakti" className="btn btn-primary">
+              Sazināties ar mums
+            </Link>
           </div>
         </div>
       </section>
