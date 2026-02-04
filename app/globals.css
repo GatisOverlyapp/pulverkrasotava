@@ -1,0 +1,196 @@
+@import "tailwindcss";
+
+/* Font faces for Sora */
+@font-face {
+  font-family: 'Sora';
+  src: url('/fonts/Sora-Regular.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Sora';
+  src: url('/fonts/Sora-Medium.woff') format('woff');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Sora';
+  src: url('/fonts/Sora-Bold.woff') format('woff');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Sora';
+  src: url('/fonts/Sora-ExtraBold.woff') format('woff');
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Design system colors */
+:root {
+  --pulver-dark: #242734;
+  --pulver-grey: #323544;
+  --pulver-gold: #ffaf22;
+  --pulver-text: #7a7c87;
+  --pulver-light: #e8e8ed;
+  --pulver-white: #faf9f9;
+}
+
+@theme inline {
+  --color-pulver-dark: var(--pulver-dark);
+  --color-pulver-grey: var(--pulver-grey);
+  --color-pulver-gold: var(--pulver-gold);
+  --color-pulver-text: var(--pulver-text);
+  --color-pulver-light: var(--pulver-light);
+  --color-pulver-white: var(--pulver-white);
+  --font-sora: 'Sora', sans-serif;
+}
+
+/* Base styles */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--pulver-dark);
+  color: var(--pulver-light);
+  font-family: 'Sora', sans-serif;
+  font-weight: 400;
+}
+
+/* Typography */
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 700;
+  color: var(--pulver-light);
+}
+
+h1 {
+  font-size: 3.5rem;
+  line-height: 1.1;
+  font-weight: 800;
+}
+
+h2 {
+  font-size: 2.5rem;
+  line-height: 1.2;
+}
+
+h3 {
+  font-size: 1.5rem;
+  line-height: 1.3;
+}
+
+a {
+  color: var(--pulver-gold);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: var(--pulver-light);
+}
+
+/* Form elements */
+input, textarea, select {
+  background: var(--pulver-grey);
+  border: 1px solid transparent;
+  color: var(--pulver-light);
+  padding: 0.75rem 1rem;
+  border-radius: 0.5rem;
+  transition: border-color 0.3s ease;
+}
+
+input:focus, textarea:focus, select:focus {
+  outline: none;
+  border-color: var(--pulver-gold);
+}
+
+input::placeholder, textarea::placeholder {
+  color: var(--pulver-text);
+}
+
+/* Buttons */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.875rem 2rem;
+  font-weight: 700;
+  border-radius: 0.5rem;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.btn-primary {
+  background: var(--pulver-gold);
+  color: var(--pulver-dark);
+}
+
+.btn-primary:hover {
+  background: var(--pulver-light);
+  color: var(--pulver-dark);
+}
+
+.btn-secondary {
+  background: transparent;
+  color: var(--pulver-gold);
+  border: 2px solid var(--pulver-gold);
+}
+
+.btn-secondary:hover {
+  background: var(--pulver-gold);
+  color: var(--pulver-dark);
+}
+
+/* Container */
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+/* Section padding */
+.section-padding {
+  padding: 5rem 0;
+}
+
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2.5rem;
+  }
+
+  h2 {
+    font-size: 1.875rem;
+  }
+
+  .section-padding {
+    padding: 3rem 0;
+  }
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--pulver-dark);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--pulver-grey);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--pulver-text);
+}

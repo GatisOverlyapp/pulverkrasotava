@@ -1,0 +1,100 @@
+export default function StructuredData() {
+  const structuredData = {
+    '@context': 'https://schema.org',
+    '@type': 'LocalBusiness',
+    '@id': 'https://pulverkrasotava.lv',
+    name: 'Pulverkrāsotava',
+    legalName: 'SIA "AFREK"',
+    description: 'Profesionāla pulverkrāsošana, smilšu strūklošana un metālapstrāde Latvijā.',
+    url: 'https://pulverkrasotava.lv',
+    telephone: '+37126102841',
+    email: 'info@pulverkrasotava.lv',
+    address: {
+      '@type': 'PostalAddress',
+      streetAddress: '"Vecvagari", Druvienas pag.',
+      addressLocality: 'Gulbenes nov.',
+      postalCode: 'LV-4426',
+      addressCountry: 'LV',
+    },
+    geo: {
+      '@type': 'GeoCoordinates',
+      latitude: 57.1566,
+      longitude: 26.7547,
+    },
+    openingHoursSpecification: [
+      {
+        '@type': 'OpeningHoursSpecification',
+        dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'],
+        opens: '08:00',
+        closes: '17:00',
+      },
+    ],
+    priceRange: '$$',
+    image: 'https://pulverkrasotava.lv/logo.svg',
+    sameAs: [
+      'https://www.facebook.com/pulverkrasotava',
+      'https://www.instagram.com/pulverkrasotava',
+    ],
+    hasOfferCatalog: {
+      '@type': 'OfferCatalog',
+      name: 'Pakalpojumi',
+      itemListElement: [
+        {
+          '@type': 'Offer',
+          itemOffered: {
+            '@type': 'Service',
+            name: 'Pulverkrāsošana',
+            description: 'Profesionāla pulverkrāsošana ar plašu krāsu izvēli',
+          },
+        },
+        {
+          '@type': 'Offer',
+          itemOffered: {
+            '@type': 'Service',
+            name: 'Smilšu strūklošana',
+            description: 'Metāla virsmu sagatavošana un tīrīšana',
+          },
+        },
+        {
+          '@type': 'Offer',
+          itemOffered: {
+            '@type': 'Service',
+            name: 'Metālapstrāde',
+            description: 'Griešana, locīšana, metināšana un citi metāla apstrādes pakalpojumi',
+          },
+        },
+        {
+          '@type': 'Offer',
+          itemOffered: {
+            '@type': 'Service',
+            name: 'Metāla konstrukcijas',
+            description: 'Metāla konstrukciju projektēšana un izgatavošana',
+          },
+        },
+        {
+          '@type': 'Offer',
+          itemOffered: {
+            '@type': 'Service',
+            name: 'Koka metāla mēbeles',
+            description: 'Metāla un koka mēbeļu izgatavošana - dārza un āra mēbeles',
+          },
+        },
+        {
+          '@type': 'Offer',
+          itemOffered: {
+            '@type': 'Service',
+            name: 'Vārtu un žogu atjaunošana',
+            description: 'Vārtu un žogu atjaunošana - smilšu strūklošana un pulverkrāsošana',
+          },
+        },
+      ],
+    },
+  };
+
+  return (
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+    />
+  );
+}
