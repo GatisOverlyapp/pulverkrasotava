@@ -60,6 +60,8 @@ npm run lint     # Run ESLint
 - **Phone:** +371 26 102 841
 - **Email:** info@pulverkrasotava.lv
 - **Region:** Vidzeme / Gulbene (only powder coating service in the region)
+- **Focus:** B2B - industrial, agricultural, forestry, manufacturing, commercial clients
+- **Target industries:** Gas stations, warehouses, real estate, farming, forestry, manufacturing
 - **Hours:** Mon-Fri 8:00-17:00
 
 ## SEO Patterns

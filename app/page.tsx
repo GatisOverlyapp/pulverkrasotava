@@ -11,7 +11,7 @@ export default function Home() {
     <>
       <Hero
         title="Pulverkrāsošana, Metālapstrāde, Smilšu Strūkla"
-        subtitle="Profesionāla pulverkrāsošana, smilšu strūklošana un metālapstrāde ar augstāko kvalitāti"
+        subtitle="Profesionāla pulverkrāsošana, smilšu strūklošana un metālapstrāde uzņēmumiem Vidzemē"
       />
       <ServicesGrid title="Mūsu pakalpojumi" />
       <WhyChooseUs title="Kāpēc izvēlēties mūs?" />

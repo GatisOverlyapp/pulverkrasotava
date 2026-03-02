@@ -6,8 +6,8 @@ import ServiceSchema from '@/components/ServiceSchema';
 import FaqSchema from '@/components/FaqSchema';
 
 export const metadata: Metadata = {
-  title: 'Metālapstrāde - Griešana, Locīšana, Metināšana',
-  description: 'Profesionāla metālapstrāde Gulbenē, Vidzemē - griešana, locīšana, metināšana un citi metāla apstrādes pakalpojumi. Zvaniet +371 26 102 841.',
+  title: 'Metālapstrāde - Griešana, Locīšana, Metināšana Vidzemē',
+  description: 'Profesionāla metālapstrāde Gulbenē, Vidzemē - griešana, locīšana, MIG/MAG un TIG metināšana. Rūpnieciskiem, lauksaimniecības un mežsaimniecības uzņēmumiem. Zvaniet +371 26 102 841.',
   alternates: {
     canonical: '/pakalpojumi/metalapstrade',
   },
@@ -16,23 +16,23 @@ export const metadata: Metadata = {
 const faqItems = [
   {
     question: 'Kādus metālapstrādes pakalpojumus piedāvājat?',
-    answer: 'Piedāvājam metāla griešanu, locīšanu, MIG/MAG un TIG metināšanu, slīpēšanu, urbšanu un citus metālapstrādes darbus. Varam apstrādāt dažāda veida metālus.',
+    answer: 'Piedāvājam metāla griešanu, locīšanu, MIG/MAG un TIG metināšanu, slīpēšanu, urbšanu un citus metālapstrādes darbus. Apkalpojam rūpnieciskos, lauksaimniecības un mežsaimniecības uzņēmumus visā Vidzemē.',
   },
   {
-    question: 'Vai varat izgatavot pēc maniem rasējumiem?',
-    answer: 'Jā, mēs izgatavosim metāla izstrādājumus pēc jūsu rasējumiem vai skicēm. Varat arī aprakstīt savu ideju, un mūsu speciālisti palīdzēs to realizēt.',
+    question: 'Vai varat izgatavot pēc mūsu tehniskajiem rasējumiem?',
+    answer: 'Jā, izgatavosim metāla izstrādājumus pēc jūsu tehniskajiem rasējumiem, CAD failiem vai skicēm. Varam arī palīdzēt ar projekta izstrādi, ja jums ir tikai ideja.',
   },
   {
-    question: 'Kāds ir minimālais pasūtījuma apjoms?',
-    answer: 'Minimālā pasūtījuma summa ir 50 EUR (bez PVN). Mēs izpildām gan viena izstrādājuma pasūtījumus, gan sērijveida ražošanu.',
+    question: 'Vai piedāvājat sērijveida ražošanu?',
+    answer: 'Jā, piedāvājam gan individuālus, gan sērijveida pasūtījumus. Lielākiem apjomiem nodrošinām izdevīgākas vienības cenas un stabilu piegādes grafiku.',
   },
   {
-    question: 'Vai piedāvājat arī pulverkrāsošanu pēc metālapstrādes?',
+    question: 'Vai piedāvājat pilnu servisu - metālapstrāde + pulverkrāsošana?',
     answer: 'Jā, mēs piedāvājam pilnu servisu - no metālapstrādes līdz smilšu strūklošanai un pulverkrāsošanai. Tas ietaupa jūsu laiku un nodrošina labāku gala rezultātu.',
   },
   {
-    question: 'Cik ilgi aizņem metālapstrādes darbi?',
-    answer: 'Izpildes laiks atkarīgs no darba sarežģītības un apjoma. Vienkārši darbi tiek izpildīti 1-3 dienu laikā, sarežģītāki projekti - 1-2 nedēļu laikā.',
+    question: 'Kādas nozares jūs apkalpojat?',
+    answer: 'Apkalpojam lauksaimniecības un mežsaimniecības uzņēmumus, ražošanas uzņēmumus, noliktavas, degvielas uzpildes stacijas, būvniecības un nekustamā īpašuma uzņēmumus, kā arī citus B2B klientus.',
   },
 ];
 
@@ -56,12 +56,12 @@ export default function MetalapstradePage() {
         backgroundImage="/images/header-background.jpg"
       />
       <TextBlock>
-        <h2>Metālapstrādes pakalpojumi</h2>
+        <h2>Metālapstrādes pakalpojumi uzņēmumiem</h2>
         <p>
-          Piedāvājam visaptverošus metālapstrādes pakalpojumus - no vienkāršiem
-          griešanas un locīšanas darbiem līdz sarežģītu konstrukciju izgatavošanai.
-          Mūsu pieredzējušie speciālisti un moderna iekārta garantē augstas
-          kvalitātes rezultātu.
+          Piedāvājam visaptverošus metālapstrādes pakalpojumus Vidzemes reģiona
+          uzņēmumiem - no vienkāršiem griešanas un locīšanas darbiem līdz sarežģītu
+          rūpniecisko konstrukciju izgatavošanai un tehnikas remontam. Mūsu pieredzējušie
+          speciālisti un moderna iekārta garantē augstas kvalitātes rezultātu.
         </p>
       </TextBlock>
 
@@ -70,13 +70,13 @@ export default function MetalapstradePage() {
         imageAlt="Metālapstrādes process"
         imagePosition="right"
       >
-        <h3>Mūsu pakalpojumi</h3>
+        <h3>Mūsu pakalpojumi un aprīkojums</h3>
         <ul>
-          <li><strong>Metāla griešana</strong> - precīza griešana pēc izmēriem</li>
+          <li><strong>Metāla griešana ar lentzāģi</strong> - precīza griešana (alumīnijs, nerūsējošais tērauds, titāns, konstrukciju tērauds, karstumizturīgie metāli). Izgriezuma platums ne vairāk kā 1.5mm</li>
           <li><strong>Metāla locīšana</strong> - dažādu profilu un leņķu veidošana</li>
-          <li><strong>Metināšana</strong> - MIG/MAG un TIG metināšana</li>
+          <li><strong>MIG/MAG metināšana</strong> - melnā un nerūsējošā tērauda metināšana, taisnu, lieku un sarežģītu konstrukciju savienošana</li>
           <li><strong>Slīpēšana</strong> - virsmu apstrāde un apdare</li>
-          <li><strong>Urbšana</strong> - precīzu caurumu veidošana</li>
+          <li><strong>Urbšana</strong> - precīzu caurumu veidošana ar iegremdēšanas iespēju, diametra paplašināšana</li>
         </ul>
       </TextWithImage>
 
@@ -85,17 +85,17 @@ export default function MetalapstradePage() {
         imageAlt="Metāla izstrādājumi"
         imagePosition="left"
       >
-        <h3>Ko varam izgatavot?</h3>
+        <h3>Nozares, kuras apkalpojam</h3>
         <p>
-          Veicam dažādus metālapstrādes darbus:
+          Piedāvājam metālapstrādes pakalpojumus dažādu nozaru uzņēmumiem:
         </p>
         <ul>
-          <li>Konstrukcijas un rāmji</li>
-          <li>Kāpnes un margas</li>
-          <li>Vārti un žogi</li>
-          <li>Mēbeļu elementi</li>
-          <li>Rūpnieciskās detaļas</li>
-          <li>Individuāli projekti pēc pasūtījuma</li>
+          <li><strong>Lauksaimniecība</strong> - traktoru un tehnikas remonts, aprīkojuma izgatavošana</li>
+          <li><strong>Mežsaimniecība</strong> - meža mašīnu detaļu atjaunošana un izgatavošana</li>
+          <li><strong>Ražošana</strong> - rūpniecisko iekārtu detaļas un konstrukcijas</li>
+          <li><strong>Noliktavas</strong> - plauktu sistēmas, statīvi, aprīkojums</li>
+          <li><strong>Būvniecība</strong> - kāpnes, margas, metāla rāmji</li>
+          <li><strong>Komerciālie objekti</strong> - DUS aprīkojums, publisko telpu mēbeles</li>
         </ul>
       </TextWithImage>
 

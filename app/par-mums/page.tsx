@@ -53,17 +53,23 @@ export default function AboutPage() {
           kvalitāti un efektīvu darba procesu:
         </p>
         <ul>
-          <li>Automātiskā pulverkrāsošanas līnija</li>
-          <li>Profesionālās smilšu strūklošanas iekārtas</li>
-          <li>Modernās cietināšanas krāsnis</li>
-          <li>Metālapstrādes aprīkojums</li>
+          <li><strong>Cietināšanas krāsns</strong> - iekšējie izmēri: 3.50m (garums) × 1.50m (platums) × 1.70m (augstums)</li>
+          <li><strong>Automātiskā pulverkrāsošanas līnija</strong> - elektrostatiskā pulvera uzklāšana</li>
+          <li><strong>Smilšu strūklošanas iekārtas</strong> - profesionāla virsmu sagatavošana</li>
+          <li><strong>Lentzāģis</strong> - precīza metāla griešana (alumīnijs, nerūsējošais tērauds, titāns, konstrukciju tērauds)</li>
+          <li><strong>MIG/MAG metināšanas iekārtas</strong> - melnais un nerūsējošais tērauds</li>
+          <li><strong>Urbšanas iekārtas</strong> - precīzu caurumu veidošana ar iegremdēšanas iespēju</li>
         </ul>
+        <p>
+          Maksimālais apstrādājamo izstrādājumu izmērs: līdz <strong>6m garumā</strong>, <strong>1.50m platumā</strong> un <strong>1.80m augstumā</strong>.
+        </p>
 
         <h3>Mūsu klienti</h3>
         <p>
-          Mēs lepojamies ar sadarbību ar dažādu nozaru uzņēmumiem un privātpersonām.
-          Starp mūsu klientiem ir ražošanas uzņēmumi, būvniecības kompānijas, auto servisi,
-          dizaineri un daudzi citi.
+          Mēs lepojamies ar sadarbību ar dažādu nozaru uzņēmumiem visā Vidzemes reģionā
+          un Latvijā. Starp mūsu klientiem ir ražošanas uzņēmumi, lauksaimniecības un
+          mežsaimniecības saimniecības, būvniecības kompānijas, noliktavas, degvielas
+          uzpildes stacijas un citi B2B klienti.
         </p>
       </TextBlock>
       <WhyChooseUs title="Mūsu priekšrocības" />

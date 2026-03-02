@@ -28,7 +28,7 @@ const faqItems = [
   },
   {
     question: 'Ko var pulverkrāsot?',
-    answer: 'Pulverkrāsot var jebkurus metāla izstrādājumus - auto diskus, vārtus, žogus, margas, mēbeles, fasādes elementus, rūpnieciskās iekārtas un daudz ko citu.',
+    answer: 'Pulverkrāsot var jebkurus metāla izstrādājumus - rūpnieciskās iekārtas, metāla konstrukcijas, lauksaimniecības tehniku, vārtus, žogus, margas, fasādes elementus un daudz ko citu.',
   },
   {
     question: 'Cik ātri tiek izpildīts pasūtījums?',
@@ -63,6 +63,13 @@ export default function PulverkrasosanaPage() {
           tradicionālās krāsošanas, pulverkrāsa nesatur šķīdinātājus un tiek uzklāta
           elektrostatiski, pēc tam sacietējot krāsnī augstā temperatūrā.
         </p>
+
+        <h3>Mūsu iekārtu tehniskie parametri</h3>
+        <p>
+          Cietināšanas krāsns iekšējie izmēri: <strong>3.50m</strong> (garums) × <strong>1.50m</strong> (platums) × <strong>1.70m</strong> (augstums).
+          Maksimālais apstrādājamo izstrādājumu izmērs līdz <strong>6m garumā</strong>, <strong>1.50m platumā</strong> un <strong>1.80m augstumā</strong>.
+          Izmantojam tikai sertificētus Eiropas ražotāju materiālus ar regulāru kvalitātes kontroli.
+        </p>
       </TextBlock>
 
       <TextWithImage
@@ -90,12 +97,12 @@ export default function PulverkrasosanaPage() {
           Pulverkrāsošana ir piemērota jebkuriem metāla izstrādājumiem:
         </p>
         <ul>
-          <li>Auto diski un detaļas</li>
+          <li>Rūpnieciskās iekārtas un tehnika</li>
+          <li>Lauksaimniecības un mežsaimniecības tehnika</li>
+          <li>Metāla konstrukcijas un rāmji</li>
           <li>Vārti, žogi un margas</li>
-          <li>Mēbeles un interjera elementi</li>
-          <li>Rūpnieciskās iekārtas</li>
-          <li>Fasādes elementi</li>
-          <li>Sporta aprīkojums</li>
+          <li>Noliktavu un komerciālais aprīkojums</li>
+          <li>Fasādes elementi un būvkonstrukcijas</li>
         </ul>
       </TextWithImage>
 

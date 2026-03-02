@@ -90,12 +90,12 @@ export default function SmilsuStruklosanaPage() {
           Smilšu strūklošana ir piemērota:
         </p>
         <ul>
+          <li>Rūpnieciskām iekārtām un tehnikai</li>
           <li>Metāla konstrukcijām un rāmjiem</li>
-          <li>Auto detaļām un diskiem</li>
-          <li>Vārtiem un žogiem</li>
-          <li>Rūpnieciskām iekārtām</li>
-          <li>Veciem izstrādājumiem atjaunošanai</li>
-          <li>Fasādes elementiem</li>
+          <li>Lauksaimniecības un mežsaimniecības tehnikai</li>
+          <li>Vārtiem, žogiem un margām</li>
+          <li>Noliktavu aprīkojumam un plauktiem</li>
+          <li>Fasādes elementiem un būvkonstrukcijām</li>
         </ul>
       </TextWithImage>
 

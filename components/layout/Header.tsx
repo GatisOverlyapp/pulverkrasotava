@@ -10,7 +10,7 @@ const services = [
   { name: 'Smilšu strūklošana', href: '/pakalpojumi/smilsu-strukla-smilsu-struklosana' },
   { name: 'Metālapstrāde', href: '/pakalpojumi/metalapstrade' },
   { name: 'Metāla konstrukcijas', href: '/pakalpojumi/metala-konstrukciju-izgatavosana-metala-izstradajumi' },
-  { name: 'Koka metāla mēbeles', href: '/pakalpojumi/metala-koka-mebelu-izgatavosana-darza-mebeles-ara-mebeles' },
+  { name: 'Metāla izstrādājumi', href: '/pakalpojumi/metala-koka-mebelu-izgatavosana-darza-mebeles-ara-mebeles' },
   { name: 'Vārtu un žogu atjaunošana', href: '/pakalpojumi/vartu-un-zogu-atjaunosana' },
 ];
 
@@ -18,6 +18,7 @@ const navigation = [
   { name: 'Sākums', href: '/' },
   { name: 'Par mums', href: '/par-mums' },
   { name: 'Pakalpojumi', href: '/pakalpojumi', hasDropdown: true },
+  { name: 'Portfolio', href: '/portfolio' },
   { name: 'Informācija', href: '/informacija' },
   { name: 'Kontakti', href: '/kontakti' },
 ];

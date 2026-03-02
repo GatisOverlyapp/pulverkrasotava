@@ -6,24 +6,11 @@ import FaqSchema from '@/components/FaqSchema';
 
 export const metadata: Metadata = {
   title: 'Cenas - Pulverkrāsošanas un Metālapstrādes Izcenojums',
-  description: 'Pulverkrāsošanas, smilšu strūklošanas un metālapstrādes cenas Gulbenē, Vidzemē. Disku pulverkrāsošana no 5 EUR. Stundas likme 25 EUR/h. Zvaniet +371 26 102 841.',
+  description: 'Pulverkrāsošanas, smilšu strūklošanas un metālapstrādes cenas Gulbenē, Vidzemē. Individuāls izcenojums rūpnieciskiem projektiem. Stundas likme 25 EUR/h. Zvaniet +371 26 102 841.',
   alternates: {
     canonical: '/cenas',
   },
 };
-
-const wheelPrices = [
-  { size: 'R13', price: '5.00 EUR' },
-  { size: 'R14', price: '5.50 EUR' },
-  { size: 'R15', price: '6.00 EUR' },
-  { size: 'R16', price: '6.50 EUR' },
-  { size: 'R17', price: '7.00 EUR' },
-  { size: 'R18', price: '8.00 EUR' },
-  { size: 'R19', price: '9.00 EUR' },
-  { size: 'R20', price: '10.00 EUR' },
-  { size: 'R21', price: '12.00 EUR' },
-  { size: 'R22', price: '15.00 EUR' },
-];
 
 const faqItems = [
   {
@@ -31,8 +18,8 @@ const faqItems = [
     answer: 'Cena tiek noteikta individuāli katram projektam, ņemot vērā izstrādājuma izmērus, formas sarežģītību, virsmas stāvokli, krāsas veidu un daudzumu. Sazinieties ar mums precīzam izcenojumam.',
   },
   {
-    question: 'Vai cenā ir iekļauta virsmas sagatavošana?',
-    answer: 'Disku pulverkrāsošanas cenā ir iekļauta standarta virsmas sagatavošana. Citiem izstrādājumiem smilšu strūklošana tiek izcenota atsevišķi.',
+    question: 'Vai piedāvājat atlaides lieliem apjomiem?',
+    answer: 'Jā, sērijveida un liela apjoma pasūtījumiem piedāvājam individuālas atlaides. Jo lielāks apjoms, jo izdevīgāka vienības cena. Sazinieties ar mums, lai apspriestu jūsu projektu.',
   },
   {
     question: 'Kāda ir minimālā pasūtījuma summa?',
@@ -40,11 +27,11 @@ const faqItems = [
   },
   {
     question: 'Vai cenas ir ar vai bez PVN?',
-    answer: 'Visas norādītās cenas ir bez PVN (21%). Fiziskām personām tiek piemērots PVN.',
+    answer: 'Visas norādītās cenas ir bez PVN (21%). Juridiskām personām PVN tiek piemērots saskaņā ar likumu.',
   },
   {
-    question: 'Vai piedāvājat atlaides lieliem apjomiem?',
-    answer: 'Jā, lielākiem pasūtījumiem piedāvājam individuālas atlaides. Sazinieties ar mums, lai apspriestu jūsu projektu un saņemtu labāko piedāvājumu.',
+    question: 'Vai iespējams noslēgt ilgtermiņa sadarbības līgumu?',
+    answer: 'Jā, regulāriem klientiem un uzņēmumiem piedāvājam ilgtermiņa sadarbības līgumus ar izdevīgākiem nosacījumiem un prioritāru pasūtījumu izpildi.',
   },
 ];
 
@@ -69,44 +56,14 @@ export default function PricingPage() {
           Standarta darbu stundas likme: <strong>25.00 EUR/h</strong> (bez PVN)
         </p>
 
-        <h3>Disku pulverkrāsošana</h3>
-      </TextBlock>
+        <h3>Pulverkrāsošana</h3>
+        <p>Cena atkarīga no izstrādājuma izmēriem, formas un daudzuma:</p>
+        <ul>
+          <li>Standarta pulverkrāsošana - no <strong>15-30 EUR/m²</strong></li>
+          <li>Sērijveida izstrādājumi - individuāls izcenojums atkarībā no apjoma</li>
+          <li>Liela izmēra konstrukcijas - pēc individuāla aprēķina</li>
+        </ul>
 
-      {/* Wheel pricing table */}
-      <section className="bg-pulver-dark pb-12">
-        <div className="container">
-          <div className="max-w-2xl mx-auto">
-            <div className="bg-pulver-grey rounded-lg overflow-hidden">
-              <table className="w-full">
-                <thead>
-                  <tr className="bg-pulver-gold text-pulver-dark">
-                    <th className="py-4 px-6 text-left font-bold">Diska izmērs</th>
-                    <th className="py-4 px-6 text-right font-bold">Cena (1 gab.)</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  {wheelPrices.map((item, index) => (
-                    <tr
-                      key={item.size}
-                      className={index % 2 === 0 ? 'bg-pulver-grey' : 'bg-pulver-dark/30'}
-                    >
-                      <td className="py-3 px-6 text-pulver-light">{item.size}</td>
-                      <td className="py-3 px-6 text-pulver-gold text-right font-semibold">
-                        {item.price}
-                      </td>
-                    </tr>
-                  ))}
-                </tbody>
-              </table>
-            </div>
-            <p className="text-pulver-text text-sm mt-4 text-center">
-              * Cenas norādītas bez PVN. Cenā iekļauta standarta vienkrāsas pulverkrāsošana.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      <TextBlock>
         <h3>Smilšu strūklošana</h3>
         <p>Cena atkarīga no virsmas stāvokļa un pieejamības:</p>
         <ul>

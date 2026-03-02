@@ -71,6 +71,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.8,
     },
     {
+      url: `${baseUrl}/portfolio`,
+      lastModified: new Date('2025-01-15'),
+      changeFrequency: 'monthly' as const,
+      priority: 0.7,
+    },
+    {
       url: `${baseUrl}/informacija`,
       lastModified: new Date('2025-01-15'),
       changeFrequency: 'weekly' as const,
@@ -112,6 +118,28 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'yearly' as const,
       priority: 0.4,
     },
+  ];
+
+  // Regional pages
+  const regionSlugs = ['vidzeme', 'latgale', 'cesis', 'valmiera', 'madona', 'aluksne', 'smiltene', 'daugavpils', 'rezekne', 'riga'];
+  const regionalPages = regionSlugs.map((slug) => ({
+    url: `${baseUrl}/regioni/${slug}`,
+    lastModified: new Date('2025-01-15'),
+    changeFrequency: 'monthly' as const,
+    priority: 0.7,
+  }));
+
+  // Industry pages
+  const industrySlugs = ['lauksaimnieciba', 'mezsaimnieciba', 'razosana', 'komercialie-objekti', 'buvnieciba'];
+  const industryPages = industrySlugs.map((slug) => ({
+    url: `${baseUrl}/nozares/${slug}`,
+    lastModified: new Date('2025-01-15'),
+    changeFrequency: 'monthly' as const,
+    priority: 0.7,
+  }));
+
+  // Legal pages
+  const legalPages = [
     {
       url: `${baseUrl}/privatums`,
       lastModified: new Date('2024-01-01'),
@@ -138,5 +166,5 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
   ];
 
-  return staticPages;
+  return [...staticPages, ...regionalPages, ...industryPages, ...legalPages];
 }

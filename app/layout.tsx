@@ -7,11 +7,11 @@ import FacebookPixel from "@/components/FacebookPixel";
 
 export const metadata: Metadata = {
   title: {
-    default: "Pulverkrāsotava | Profesionāla pulverkrāsošana Latvijā",
+    default: "Pulverkrāsotava | Profesionāla pulverkrāsošana Vidzemē, Latvijā",
     template: "%s | Pulverkrāsotava",
   },
-  description: "Profesionāla pulverkrāsošana, smilšu strūklošana un metālapstrāde Latvijā. Augsta kvalitāte, konkurētspējīgas cenas un ātra izpilde.",
-  keywords: ["pulverkrāsošana", "smilšu strūklošana", "metālapstrāde", "metāla konstrukcijas", "Latvija"],
+  description: "Profesionāla pulverkrāsošana, smilšu strūklošana un metālapstrāde Vidzemē, Latvijā. B2B pakalpojumi rūpniecības, lauksaimniecības un mežsaimniecības uzņēmumiem.",
+  keywords: ["pulverkrāsošana", "smilšu strūklošana", "metālapstrāde", "metāla konstrukcijas", "Vidzeme", "Gulbene", "rūpnieciskā krāsošana", "metāla izstrādājumi"],
   authors: [{ name: "Pulverkrāsotava" }],
   creator: "Pulverkrāsotava",
   metadataBase: new URL("https://pulverkrasotava.lv"),
@@ -26,8 +26,8 @@ export const metadata: Metadata = {
     locale: "lv_LV",
     url: "https://pulverkrasotava.lv",
     siteName: "Pulverkrāsotava",
-    title: "Pulverkrāsotava | Profesionāla pulverkrāsošana Latvijā",
-    description: "Profesionāla pulverkrāsošana, smilšu strūklošana un metālapstrāde Latvijā.",
+    title: "Pulverkrāsotava | Profesionāla pulverkrāsošana Vidzemē, Latvijā",
+    description: "Profesionāla pulverkrāsošana, smilšu strūklošana un metālapstrāde Vidzemē, Latvijā. B2B pakalpojumi uzņēmumiem.",
     images: [
       {
         url: "/images/header-background.jpg",
@@ -39,8 +39,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Pulverkrāsotava | Profesionāla pulverkrāsošana Latvijā",
-    description: "Profesionāla pulverkrāsošana, smilšu strūklošana un metālapstrāde Latvijā.",
+    title: "Pulverkrāsotava | Profesionāla pulverkrāsošana Vidzemē, Latvijā",
+    description: "Profesionāla pulverkrāsošana, smilšu strūklošana un metālapstrāde Vidzemē, Latvijā. B2B pakalpojumi uzņēmumiem.",
     images: ["/images/header-background.jpg"],
   },
   robots: {

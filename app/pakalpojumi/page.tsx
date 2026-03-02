@@ -6,7 +6,7 @@ import BreadcrumbSchema from '@/components/BreadcrumbSchema';
 
 export const metadata: Metadata = {
   title: 'Pakalpojumi - Pulverkrāsošana, Metālapstrāde, Smilšu Strūkla',
-  description: 'Pulverkrāsotava piedāvā pulverkrāsošanu, smilšu strūklošanu, metālapstrādi, metāla konstrukciju izgatavošanu, mēbeļu izgatavošanu un vārtu atjaunošanu Gulbenē, Vidzemē. Zvaniet +371 26 102 841.',
+  description: 'Pulverkrāsotava piedāvā pulverkrāsošanu, smilšu strūklošanu, metālapstrādi, metāla konstrukciju un izstrādājumu ražošanu Gulbenē, Vidzemē. B2B pakalpojumi uzņēmumiem. Zvaniet +371 26 102 841.',
   alternates: {
     canonical: '/pakalpojumi',
   },
@@ -38,10 +38,10 @@ const services = [
     description: 'Metāla konstrukciju izgatavošana pēc individuāliem projektiem - kāpnes, margas, vārti, žogi.',
   },
   {
-    title: 'Koka metāla mēbeles',
+    title: 'Metāla izstrādājumi un mēbeles',
     slug: 'metala-koka-mebelu-izgatavosana-darza-mebeles-ara-mebeles',
     icon: '/images/services/service_2.svg',
-    description: 'Metāla un koka mēbeļu izgatavošana - dārza mēbeles, āra mēbeles, soliņi pēc pasūtījuma.',
+    description: 'Metāla izstrādājumu un mēbeļu ražošana - komerciālās mēbeles, noliktavu aprīkojums, rūpnieciskās konstrukcijas pēc pasūtījuma.',
   },
   {
     title: 'Vārtu un žogu atjaunošana',

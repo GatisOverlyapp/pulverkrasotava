@@ -154,9 +154,9 @@ export default function Footer() {
             <div>
               <h4 className="text-pulver-light font-semibold mb-3">Banka</h4>
               <p className="text-pulver-text text-sm leading-relaxed">
-                AS Swedbank<br />
-                SWIFT: HABALV22<br />
-                IBAN: LV97HABA0551046498344
+                AS Citadele banka<br />
+                SWIFT: PARXLV22<br />
+                IBAN: LV98PARX0022580170001
               </p>
             </div>
           </div>

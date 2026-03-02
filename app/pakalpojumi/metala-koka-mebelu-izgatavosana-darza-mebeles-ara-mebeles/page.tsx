@@ -6,8 +6,8 @@ import ServiceSchema from '@/components/ServiceSchema';
 import FaqSchema from '@/components/FaqSchema';
 
 export const metadata: Metadata = {
-  title: 'Koka Metāla Mēbeles - Dārza un Āra Mēbeles pēc Pasūtījuma',
-  description: 'Metāla un koka mēbeļu izgatavošana Gulbenē, Vidzemē - dārza mēbeles, āra mēbeles, soliņi, galdi pēc individuāla pasūtījuma. Zvaniet +371 26 102 841.',
+  title: 'Metāla Izstrādājumi un Mēbeles - Ražošana pēc Pasūtījuma',
+  description: 'Metāla izstrādājumu un mēbeļu ražošana Gulbenē, Vidzemē - komerciālās mēbeles, noliktavu aprīkojums, rūpnieciskās konstrukcijas pēc individuāla pasūtījuma. Zvaniet +371 26 102 841.',
   alternates: {
     canonical: '/pakalpojumi/metala-koka-mebelu-izgatavosana-darza-mebeles-ara-mebeles',
   },
@@ -15,87 +15,87 @@ export const metadata: Metadata = {
 
 const faqItems = [
   {
-    question: 'Kādas mēbeles varat izgatavot?',
-    answer: 'Izgatavosim dārza soliņus, galdus, šūpuļus, āra mēbeļu komplektus, puķu kastes un jebkuras citas metāla un koka mēbeles pēc jūsu individuāla pasūtījuma.',
+    question: 'Kādus metāla izstrādājumus varat ražot?',
+    answer: 'Ražojam plašu klāstu metāla izstrādājumu - komerciālās mēbeles (galdus, soliņus, plauktus), noliktavu aprīkojumu, rūpnieciskās konstrukcijas, lauksaimniecības aprīkojuma elementus un citus metāla izstrādājumus pēc individuāla pasūtījuma.',
   },
   {
-    question: 'Vai mēbeles ir izturīgas pret laikapstākļiem?',
-    answer: 'Jā, metāla rāmji tiek pulverkrāsoti, kas nodrošina lielisku aizsardzību pret koroziju. Koka elementi tiek apstrādāti ar speciāliem aizsarglīdzekļiem.',
+    question: 'Vai varat izgatavot pēc mūsu rasējumiem vai specifikācijām?',
+    answer: 'Jā, izgatavosim izstrādājumus pēc jūsu tehniskajiem rasējumiem, specifikācijām vai skicēm. Varam arī palīdzēt ar tehnisko projektu izstrādi, ja jums ir tikai ideja.',
   },
   {
-    question: 'Kādu koku izmantojat?',
-    answer: 'Visbiežāk izmantojam termiski apstrādātu priedi vai ozolu, kas ir izturīgi pret mitrumu un laikapstākļiem. Pēc vēlēšanās varam izmantot arī citus koku veidus.',
+    question: 'Vai piedāvājat sērijveida ražošanu?',
+    answer: 'Jā, piedāvājam gan individuālu, gan sērijveida ražošanu. Lielākiem apjomiem nodrošinām izdevīgākas vienības cenas un stabilu piegādes grafiku.',
   },
   {
-    question: 'Cik ilgi kalpo āra mēbeles?',
-    answer: 'Ar pareizu kopšanu mūsu metāla un koka mēbeles kalpo 10-15 gadus un vairāk. Pulverkrāsotais metāla rāmis nodrošina ilgmūžīgu aizsardzību.',
+    question: 'Kādi materiāli un apdare ir pieejami?',
+    answer: 'Izmantojam dažāda veida tēraudu, nerūsējošo tēraudu un alumīniju. Metāla izstrādājumi tiek pulverkrāsoti, nodrošinot ilgmūžīgu aizsardzību pret koroziju. Koka elementi - termiski apstrādāta priede vai ozols.',
   },
   {
-    question: 'Vai varat izgatavot pēc maniem rasējumiem?',
-    answer: 'Jā, izgatavosim mēbeles pēc jūsu skicēm vai fotogrāfijām. Varam arī palīdzēt ar dizaina izstrādi, ja jums ir tikai ideja.',
+    question: 'Cik ilgi kalpo jūsu izstrādājumi?',
+    answer: 'Ar pulverkrāsas pārklājumu metāla izstrādājumi kalpo 15-20 gadus un vairāk. Tie ir izturīgi pret laikapstākļiem, mehāniskiem bojājumiem un koroziju.',
   },
 ];
 
-export default function KokaMebelesPage() {
+export default function MetalaIzstradajumiPage() {
   return (
     <>
       <BreadcrumbSchema items={[
         { name: 'Sākums', href: '/' },
         { name: 'Pakalpojumi', href: '/pakalpojumi' },
-        { name: 'Koka metāla mēbeles', href: '/pakalpojumi/metala-koka-mebelu-izgatavosana-darza-mebeles-ara-mebeles' },
+        { name: 'Metāla izstrādājumi un mēbeles', href: '/pakalpojumi/metala-koka-mebelu-izgatavosana-darza-mebeles-ara-mebeles' },
       ]} />
       <ServiceSchema
-        name="Koka metāla mēbeļu izgatavošana"
-        description="Metāla un koka mēbeļu izgatavošana - dārza mēbeles, āra mēbeles, soliņi, galdi pēc individuāla pasūtījuma."
+        name="Metāla izstrādājumu un mēbeļu ražošana"
+        description="Metāla izstrādājumu un mēbeļu ražošana pēc individuāla pasūtījuma - komerciālās mēbeles, noliktavu aprīkojums, rūpnieciskās konstrukcijas."
         url="/pakalpojumi/metala-koka-mebelu-izgatavosana-darza-mebeles-ara-mebeles"
         image="/images/services/mebeles-1.jpg"
       />
       <FaqSchema items={faqItems} />
       <PageHero
-        title="Koka metāla mēbeles"
+        title="Metāla izstrādājumi un mēbeles"
         backgroundImage="/images/header-background.jpg"
       />
       <TextBlock>
-        <h2>Metāla un koka mēbeļu izgatavošana</h2>
+        <h2>Metāla izstrādājumu un mēbeļu ražošana</h2>
         <p>
-          Piedāvājam unikālas metāla un koka mēbeles pēc individuāla pasūtījuma.
-          Dārza mēbeles, āra mēbeles, soliņi un galdi - mēs izgatavosim tieši to,
-          ko vēlaties.
+          Piedāvājam metāla izstrādājumu un mēbeļu ražošanu pēc individuāla pasūtījuma.
+          No komerciālajām mēbelēm un noliktavu aprīkojuma līdz rūpnieciskajām
+          konstrukcijām - mēs izgatavosim tieši to, kas nepieciešams jūsu uzņēmumam.
         </p>
       </TextBlock>
 
       <TextWithImage
         image="/images/services/mebeles-1.jpg"
-        imageAlt="Dārza mēbeles"
+        imageAlt="Metāla izstrādājumi"
         imagePosition="right"
       >
         <h3>Ko varam izgatavot?</h3>
         <ul>
-          <li><strong>Dārza soliņi</strong> - klasiskā un modernā dizainā</li>
-          <li><strong>Dārza galdi</strong> - piknika un terases galdi</li>
-          <li><strong>Āra mēbeļu komplekti</strong> - pilni mēbeļu komplekti</li>
-          <li><strong>Puķu kastes</strong> - metāla puķu kastes un paliktņi</li>
-          <li><strong>Šūpuļi</strong> - dārza šūpuļi un krēsli</li>
-          <li><strong>Individuāli projekti</strong> - pēc jūsu skicēm</li>
+          <li><strong>Komerciālās mēbeles</strong> - galdi, soliņi, plaukti publiskām telpām un uzņēmumiem</li>
+          <li><strong>Noliktavu aprīkojums</strong> - metāla plaukti, statīvi, ratiņi</li>
+          <li><strong>Āra aprīkojums</strong> - soliņi, atkritumu urnas, velostatīvi publiskām teritorijām</li>
+          <li><strong>Rūpnieciskās konstrukcijas</strong> - darba galdi, rāmji, turētāji</li>
+          <li><strong>Lauksaimniecības aprīkojums</strong> - barošanas sistēmas, nožogojumi, konstrukcijas</li>
+          <li><strong>Individuāli projekti</strong> - pēc jūsu specifikācijām un rasējumiem</li>
         </ul>
       </TextWithImage>
 
       <TextWithImage
         image="/images/services/mebeles-2.jpg"
-        imageAlt="Āra mēbeles"
+        imageAlt="Metāla mēbeles"
         imagePosition="left"
       >
-        <h3>Materiāli un kvalitāte</h3>
+        <h3>Kvalitāte un izturība</h3>
         <p>
-          Mūsu mēbeles ir:
+          Mūsu izstrādājumi ir:
         </p>
         <ul>
-          <li>Izturīgas pret laikapstākļiem</li>
-          <li>Ar pulverkrāsotu metāla rāmi</li>
-          <li>Ar kvalitatīvu koka apdari</li>
-          <li>Izturīgas un ilgmūžīgas</li>
-          <li>Estētiski pievilcīgas</li>
-          <li>Viegli kopjamas</li>
+          <li>Izturīgi pret laikapstākļiem un mehāniskiem bojājumiem</li>
+          <li>Ar pulverkrāsotu metāla rāmi ilgmūžīgai aizsardzībai</li>
+          <li>Piemēroti intensīvai komerciālai lietošanai</li>
+          <li>Izgatavoti no augstas kvalitātes materiāliem</li>
+          <li>Pieejami sērijveida ražošanā</li>
+          <li>Ar pilnu servisu - no projekta līdz uzstādīšanai</li>
         </ul>
       </TextWithImage>
 
@@ -104,10 +104,10 @@ export default function KokaMebelesPage() {
       <section className="bg-pulver-grey section-padding">
         <div className="container text-center">
           <h2 className="text-pulver-light text-2xl md:text-3xl font-bold mb-6">
-            Vēlaties unikālas mēbeles?
+            Nepieciešami metāla izstrādājumi jūsu uzņēmumam?
           </h2>
           <p className="text-pulver-text mb-8 max-w-2xl mx-auto">
-            Sazinieties ar mums, lai apspriestu jūsu idejas un saņemtu bezmaksas konsultāciju.
+            Sazinieties ar mums, lai apspriestu jūsu projektu un saņemtu bezmaksas konsultāciju un izmaksu aprēķinu.
           </p>
           <Link href="/kontakti" className="btn btn-primary">
             Sazināties ar mums

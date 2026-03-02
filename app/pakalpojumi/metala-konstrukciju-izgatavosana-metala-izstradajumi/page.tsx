@@ -7,7 +7,7 @@ import FaqSchema from '@/components/FaqSchema';
 
 export const metadata: Metadata = {
   title: 'Metāla Konstrukcijas - Izgatavošana pēc Pasūtījuma',
-  description: 'Metāla konstrukciju izgatavošana Gulbenē, Vidzemē - kāpnes, margas, vārti, žogi pēc individuāla pasūtījuma. Zvaniet +371 26 102 841.',
+  description: 'Metāla konstrukciju izgatavošana Gulbenē, Vidzemē - rūpnieciskās konstrukcijas, kāpnes, margas, vārti pēc individuāla pasūtījuma. B2B pakalpojumi uzņēmumiem. Zvaniet +371 26 102 841.',
   alternates: {
     canonical: '/pakalpojumi/metala-konstrukciju-izgatavosana-metala-izstradajumi',
   },
@@ -75,8 +75,8 @@ export default function MetalaKonstrukcijasPage() {
           <li><strong>Margas</strong> - balkonu, terašu un kāpņu margas</li>
           <li><strong>Vārti</strong> - iebraucamie un gājēju vārti</li>
           <li><strong>Žogi</strong> - dekoratīvie un drošības žogi</li>
-          <li><strong>Nojumes</strong> - auto nojumes un terases</li>
-          <li><strong>Rāmji</strong> - konstrukciju un mēbeļu rāmji</li>
+          <li><strong>Nojumes</strong> - noliktavu, ražotņu un teritoriju nojumes</li>
+          <li><strong>Rūpnieciskās konstrukcijas</strong> - rāmji, turētāji, stiprinājumi ražotnēm</li>
         </ul>
       </TextWithImage>
 

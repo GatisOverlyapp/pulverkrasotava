@@ -5,7 +5,7 @@ export default function StructuredData() {
     '@id': 'https://pulverkrasotava.lv',
     name: 'Pulverkrāsotava',
     legalName: 'SIA "AFREK"',
-    description: 'Profesionāla pulverkrāsošana, smilšu strūklošana un metālapstrāde Latvijā.',
+    description: 'Profesionāla pulverkrāsošana, smilšu strūklošana un metālapstrāde Vidzemē, Latvijā. B2B pakalpojumi rūpniecības, lauksaimniecības un mežsaimniecības uzņēmumiem.',
     url: 'https://pulverkrasotava.lv',
     telephone: '+37126102841',
     email: 'info@pulverkrasotava.lv',
@@ -85,8 +85,8 @@ export default function StructuredData() {
           '@type': 'Offer',
           itemOffered: {
             '@type': 'Service',
-            name: 'Koka metāla mēbeles',
-            description: 'Metāla un koka mēbeļu izgatavošana - dārza un āra mēbeles',
+            name: 'Metāla izstrādājumi un mēbeles',
+            description: 'Metāla izstrādājumu un mēbeļu ražošana - komerciālās mēbeles, noliktavu aprīkojums, rūpnieciskās konstrukcijas',
           },
         },
         {

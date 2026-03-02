@@ -7,7 +7,7 @@ import FaqSchema from '@/components/FaqSchema';
 
 export const metadata: Metadata = {
   title: 'Vārtu un Žogu Atjaunošana - Smilšu Strūkla un Pulverkrāsošana',
-  description: 'Vārtu un žogu atjaunošana Gulbenē, Vidzemē - smilšu strūklošana, rūsas noņemšana un pulverkrāsošana. Atjaunojam vecus vārtus un žogus. Zvaniet +371 26 102 841.',
+  description: 'Vārtu un žogu atjaunošana Gulbenē, Vidzemē - smilšu strūklošana, rūsas noņemšana un pulverkrāsošana. Teritoriju nožogojumi uzņēmumiem un saimniecībām. Zvaniet +371 26 102 841.',
   alternates: {
     canonical: '/pakalpojumi/vartu-un-zogu-atjaunosana',
   },
