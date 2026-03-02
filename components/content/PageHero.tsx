@@ -21,7 +21,7 @@ export default function PageHero({
           priority
           quality={85}
         />
-        <div className="absolute inset-0 bg-pulver-dark/30"></div>
+        <div className="absolute inset-0 bg-black/10"></div>
       </div>
 
       {/* Content */}

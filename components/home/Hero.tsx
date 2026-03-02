@@ -26,7 +26,7 @@ export default function Hero({
           priority
           quality={90}
         />
-        <div className="absolute inset-0 bg-pulver-dark/30"></div>
+        <div className="absolute inset-0 bg-black/10"></div>
       </div>
 
       {/* Content */}
