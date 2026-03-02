@@ -15,11 +15,9 @@ const services = [
 ];
 
 const navigation = [
-  { name: 'Sākums', href: '/' },
-  { name: 'Par mums', href: '/par-mums' },
   { name: 'Pakalpojumi', href: '/pakalpojumi', hasDropdown: true },
   { name: 'Portfolio', href: '/portfolio' },
-  { name: 'Informācija', href: '/informacija' },
+  { name: 'Par mums', href: '/par-mums' },
   { name: 'Kontakti', href: '/kontakti' },
 ];
 

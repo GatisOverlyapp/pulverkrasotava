@@ -4,6 +4,24 @@ import Link from 'next/link';
 import Image from 'next/image';
 import QuickQuestionForm from '../forms/QuickQuestionForm';
 
+const footerNavigation = [
+  { name: 'Pakalpojumi', href: '/pakalpojumi' },
+  { name: 'Portfolio', href: '/portfolio' },
+  { name: 'Par mums', href: '/par-mums' },
+  { name: 'Informācija', href: '/informacija' },
+  { name: 'Cenas', href: '/cenas' },
+  { name: 'Kontakti', href: '/kontakti' },
+];
+
+const footerServices = [
+  { name: 'Pulverkrāsošana', href: '/pakalpojumi/pulverkrasosana' },
+  { name: 'Smilšu strūklošana', href: '/pakalpojumi/smilsu-strukla-smilsu-struklosana' },
+  { name: 'Metālapstrāde', href: '/pakalpojumi/metalapstrade' },
+  { name: 'Metāla konstrukcijas', href: '/pakalpojumi/metala-konstrukciju-izgatavosana-metala-izstradajumi' },
+  { name: 'Metāla izstrādājumi', href: '/pakalpojumi/metala-koka-mebelu-izgatavosana-darza-mebeles-ara-mebeles' },
+  { name: 'Vārtu un žogu atjaunošana', href: '/pakalpojumi/vartu-un-zogu-atjaunosana' },
+];
+
 const footerLinks = [
   { name: 'Privātuma politika', href: '/privatums' },
   { name: 'Lietošanas noteikumi', href: '/lietosanas-noteikumi' },
@@ -139,8 +157,63 @@ export default function Footer() {
           </div>
         </div>
 
-        {/* Company info */}
+        {/* Footer navigation */}
         <div className="mt-12 pt-8 border-t border-pulver-grey">
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-8 mb-8">
+            <div>
+              <h4 className="text-pulver-light font-semibold mb-4">Navigācija</h4>
+              <ul className="space-y-2">
+                {footerNavigation.map((link) => (
+                  <li key={link.name}>
+                    <Link
+                      href={link.href}
+                      className="text-pulver-text hover:text-pulver-gold transition-colors text-sm"
+                    >
+                      {link.name}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
+            <div>
+              <h4 className="text-pulver-light font-semibold mb-4">Pakalpojumi</h4>
+              <ul className="space-y-2">
+                {footerServices.map((link) => (
+                  <li key={link.name}>
+                    <Link
+                      href={link.href}
+                      className="text-pulver-text hover:text-pulver-gold transition-colors text-sm"
+                    >
+                      {link.name}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
+            <div>
+              <h4 className="text-pulver-light font-semibold mb-4">Kontakti</h4>
+              <ul className="space-y-2">
+                <li>
+                  <a href="tel:+37126102841" className="text-pulver-text hover:text-pulver-gold transition-colors text-sm">
+                    +371 26 102 841
+                  </a>
+                </li>
+                <li>
+                  <a href="mailto:info@pulverkrasotava.lv" className="text-pulver-text hover:text-pulver-gold transition-colors text-sm">
+                    info@pulverkrasotava.lv
+                  </a>
+                </li>
+                <li className="text-pulver-text text-sm">
+                  &quot;Vecvagari&quot;, Druvienas pag.,<br />
+                  Gulbenes nov., LV-4426
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        {/* Company info */}
+        <div className="pt-8 border-t border-pulver-grey">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
             <div>
               <h4 className="text-pulver-light font-semibold mb-3">Rekvizīti</h4>
