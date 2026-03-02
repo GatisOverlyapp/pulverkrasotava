@@ -1,15 +1,23 @@
 import { Metadata } from 'next';
 import { PageHero } from '@/components/content';
 import { ContactForm } from '@/components/forms';
+import BreadcrumbSchema from '@/components/BreadcrumbSchema';
 
 export const metadata: Metadata = {
-  title: 'Kontakti',
-  description: 'Sazinieties ar Pulverkrāsotava - adrese, tālrunis, e-pasts un kontaktforma.',
+  title: 'Kontakti - Pulverkrāsošana Gulbenē, Vidzemē',
+  description: 'Sazinieties ar Pulverkrāsotava - "Vecvagari", Druvienas pag., Gulbenes nov. Tālrunis: +371 26 102 841. E-pasts: info@pulverkrasotava.lv. Darba laiks: P-Pk 8:00-17:00.',
+  alternates: {
+    canonical: '/kontakti',
+  },
 };
 
 export default function ContactPage() {
   return (
     <>
+      <BreadcrumbSchema items={[
+        { name: 'Sākums', href: '/' },
+        { name: 'Kontakti', href: '/kontakti' },
+      ]} />
       <PageHero
         title="Kontakti"
         backgroundImage="/images/contact-us-background-image.jpg"

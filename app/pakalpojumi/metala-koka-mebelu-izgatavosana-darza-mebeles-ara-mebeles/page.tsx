@@ -1,15 +1,56 @@
 import { Metadata } from 'next';
-import { PageHero, TextBlock, TextWithImage } from '@/components/content';
+import { PageHero, TextBlock, TextWithImage, FaqAccordion } from '@/components/content';
 import Link from 'next/link';
+import BreadcrumbSchema from '@/components/BreadcrumbSchema';
+import ServiceSchema from '@/components/ServiceSchema';
+import FaqSchema from '@/components/FaqSchema';
 
 export const metadata: Metadata = {
-  title: 'Koka metāla mēbeles | Pulverkrāsotava',
-  description: 'Metāla un koka mēbeļu izgatavošana - dārza mēbeles, āra mēbeles, soliņi, galdi pēc individuāla pasūtījuma.',
+  title: 'Koka Metāla Mēbeles - Dārza un Āra Mēbeles pēc Pasūtījuma',
+  description: 'Metāla un koka mēbeļu izgatavošana Gulbenē, Vidzemē - dārza mēbeles, āra mēbeles, soliņi, galdi pēc individuāla pasūtījuma. Zvaniet +371 26 102 841.',
+  alternates: {
+    canonical: '/pakalpojumi/metala-koka-mebelu-izgatavosana-darza-mebeles-ara-mebeles',
+  },
 };
+
+const faqItems = [
+  {
+    question: 'Kādas mēbeles varat izgatavot?',
+    answer: 'Izgatavosim dārza soliņus, galdus, šūpuļus, āra mēbeļu komplektus, puķu kastes un jebkuras citas metāla un koka mēbeles pēc jūsu individuāla pasūtījuma.',
+  },
+  {
+    question: 'Vai mēbeles ir izturīgas pret laikapstākļiem?',
+    answer: 'Jā, metāla rāmji tiek pulverkrāsoti, kas nodrošina lielisku aizsardzību pret koroziju. Koka elementi tiek apstrādāti ar speciāliem aizsarglīdzekļiem.',
+  },
+  {
+    question: 'Kādu koku izmantojat?',
+    answer: 'Visbiežāk izmantojam termiski apstrādātu priedi vai ozolu, kas ir izturīgi pret mitrumu un laikapstākļiem. Pēc vēlēšanās varam izmantot arī citus koku veidus.',
+  },
+  {
+    question: 'Cik ilgi kalpo āra mēbeles?',
+    answer: 'Ar pareizu kopšanu mūsu metāla un koka mēbeles kalpo 10-15 gadus un vairāk. Pulverkrāsotais metāla rāmis nodrošina ilgmūžīgu aizsardzību.',
+  },
+  {
+    question: 'Vai varat izgatavot pēc maniem rasējumiem?',
+    answer: 'Jā, izgatavosim mēbeles pēc jūsu skicēm vai fotogrāfijām. Varam arī palīdzēt ar dizaina izstrādi, ja jums ir tikai ideja.',
+  },
+];
 
 export default function KokaMebelesPage() {
   return (
     <>
+      <BreadcrumbSchema items={[
+        { name: 'Sākums', href: '/' },
+        { name: 'Pakalpojumi', href: '/pakalpojumi' },
+        { name: 'Koka metāla mēbeles', href: '/pakalpojumi/metala-koka-mebelu-izgatavosana-darza-mebeles-ara-mebeles' },
+      ]} />
+      <ServiceSchema
+        name="Koka metāla mēbeļu izgatavošana"
+        description="Metāla un koka mēbeļu izgatavošana - dārza mēbeles, āra mēbeles, soliņi, galdi pēc individuāla pasūtījuma."
+        url="/pakalpojumi/metala-koka-mebelu-izgatavosana-darza-mebeles-ara-mebeles"
+        image="/images/services/mebeles-1.jpg"
+      />
+      <FaqSchema items={faqItems} />
       <PageHero
         title="Koka metāla mēbeles"
         backgroundImage="/images/header-background.jpg"
@@ -57,6 +98,8 @@ export default function KokaMebelesPage() {
           <li>Viegli kopjamas</li>
         </ul>
       </TextWithImage>
+
+      <FaqAccordion title="Biežāk uzdotie jautājumi" items={faqItems} />
 
       <section className="bg-pulver-grey section-padding">
         <div className="container text-center">

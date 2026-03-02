@@ -1,14 +1,22 @@
 import { Metadata } from 'next';
 import { PageHero, TextBlock } from '@/components/content';
+import BreadcrumbSchema from '@/components/BreadcrumbSchema';
 
 export const metadata: Metadata = {
   title: 'Cookie Policy',
   description: 'Pulverkrāsotava sīkdatņu (cookie) politika.',
+  alternates: {
+    canonical: '/cookie-policy',
+  },
 };
 
 export default function CookiePolicyPage() {
   return (
     <>
+      <BreadcrumbSchema items={[
+        { name: 'Sākums', href: '/' },
+        { name: 'Sīkdatņu politika', href: '/cookie-policy' },
+      ]} />
       <PageHero title="Sīkdatņu politika" />
       <TextBlock>
         <h2>Sīkdatņu (Cookie) politika</h2>

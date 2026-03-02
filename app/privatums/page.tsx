@@ -1,14 +1,22 @@
 import { Metadata } from 'next';
 import { PageHero, TextBlock } from '@/components/content';
+import BreadcrumbSchema from '@/components/BreadcrumbSchema';
 
 export const metadata: Metadata = {
   title: 'Privātuma politika',
   description: 'Pulverkrāsotava privātuma politika - kā mēs apstrādājam jūsu personas datus.',
+  alternates: {
+    canonical: '/privatums',
+  },
 };
 
 export default function PrivacyPage() {
   return (
     <>
+      <BreadcrumbSchema items={[
+        { name: 'Sākums', href: '/' },
+        { name: 'Privātuma politika', href: '/privatums' },
+      ]} />
       <PageHero title="Privātuma politika" />
       <TextBlock>
         <h2>Privātuma politika</h2>

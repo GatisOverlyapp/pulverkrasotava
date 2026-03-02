@@ -51,7 +51,7 @@ export default function WhyChooseUs({
               <div className="w-16 h-16 mx-auto mb-4 flex items-center justify-center">
                 <Image
                   src={item.icon}
-                  alt=""
+                  alt={item.title}
                   width={64}
                   height={64}
                   className="w-full h-full object-contain"

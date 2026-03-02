@@ -1,14 +1,22 @@
 import { Metadata } from 'next';
 import { PageHero, TextBlock } from '@/components/content';
+import BreadcrumbSchema from '@/components/BreadcrumbSchema';
 
 export const metadata: Metadata = {
   title: 'Atruna',
   description: 'Pulverkrāsotava juridiskā atruna.',
+  alternates: {
+    canonical: '/atruna',
+  },
 };
 
 export default function DisclaimerPage() {
   return (
     <>
+      <BreadcrumbSchema items={[
+        { name: 'Sākums', href: '/' },
+        { name: 'Atruna', href: '/atruna' },
+      ]} />
       <PageHero title="Atruna" />
       <TextBlock>
         <h2>Juridiskā atruna</h2>

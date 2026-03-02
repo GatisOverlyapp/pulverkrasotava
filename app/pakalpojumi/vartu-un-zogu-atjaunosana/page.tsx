@@ -1,15 +1,56 @@
 import { Metadata } from 'next';
-import { PageHero, TextBlock, TextWithImage } from '@/components/content';
+import { PageHero, TextBlock, TextWithImage, FaqAccordion } from '@/components/content';
 import Link from 'next/link';
+import BreadcrumbSchema from '@/components/BreadcrumbSchema';
+import ServiceSchema from '@/components/ServiceSchema';
+import FaqSchema from '@/components/FaqSchema';
 
 export const metadata: Metadata = {
-  title: 'Vārtu un žogu atjaunošana | Pulverkrāsotava',
-  description: 'Vārtu un žogu atjaunošana - smilšu strūklošana, rūsas noņemšana un pulverkrāsošana. Atjaunojam vecus vārtus un žogus.',
+  title: 'Vārtu un Žogu Atjaunošana - Smilšu Strūkla un Pulverkrāsošana',
+  description: 'Vārtu un žogu atjaunošana Gulbenē, Vidzemē - smilšu strūklošana, rūsas noņemšana un pulverkrāsošana. Atjaunojam vecus vārtus un žogus. Zvaniet +371 26 102 841.',
+  alternates: {
+    canonical: '/pakalpojumi/vartu-un-zogu-atjaunosana',
+  },
 };
+
+const faqItems = [
+  {
+    question: 'Kā notiek vārtu atjaunošanas process?',
+    answer: 'Process ietver vairākus soļus: demontāža (ja nepieciešams), smilšu strūklošana rūsas un vecās krāsas noņemšanai, metāla remonts (ja nepieciešams), pulverkrāsošana un montāža atpakaļ.',
+  },
+  {
+    question: 'Vai atjaunošana ir izdevīgāka par jaunu vārtu iegādi?',
+    answer: 'Vairumā gadījumu atjaunošana ir ievērojami izdevīgāka nekā jaunu vārtu vai žoga iegāde. Izmaksas parasti ir 30-50% no jaunas konstrukcijas cenas, un jūs saglabājat savu unikālo dizainu.',
+  },
+  {
+    question: 'Vai varat atjaunot arī kaltos vārtus?',
+    answer: 'Jā, mēs specializējamies arī kalto vārtu un žogu atjaunošanā. Smilšu strūklošana un pulverkrāsošana ļauj pilnībā atjaunot pat ļoti sarūsējušus kaltus izstrādājumus.',
+  },
+  {
+    question: 'Cik ilgi kalpo atjaunotie vārti?',
+    answer: 'Ar pulverkrāsas pārklājumu atjaunotie vārti kalpo 15-20 gadus, kas ir ievērojami ilgāk nekā tradicionālā krāsošana. Pulverkrāsa nodrošina lielisku aizsardzību pret koroziju.',
+  },
+  {
+    question: 'Vai piedāvājat transportu?',
+    answer: 'Jā, varam organizēt vārtu un žogu elementu transportēšanu no jūsu objekta uz mūsu darbnīcu un atpakaļ. Sazinieties ar mums, lai apspriestu transporta iespējas.',
+  },
+];
 
 export default function VartuAtjaunosanaPage() {
   return (
     <>
+      <BreadcrumbSchema items={[
+        { name: 'Sākums', href: '/' },
+        { name: 'Pakalpojumi', href: '/pakalpojumi' },
+        { name: 'Vārtu un žogu atjaunošana', href: '/pakalpojumi/vartu-un-zogu-atjaunosana' },
+      ]} />
+      <ServiceSchema
+        name="Vārtu un žogu atjaunošana"
+        description="Vārtu un žogu atjaunošana - smilšu strūklošana, rūsas noņemšana un pulverkrāsošana. Pilns atjaunošanas serviss."
+        url="/pakalpojumi/vartu-un-zogu-atjaunosana"
+        image="/images/services/varti-1.jpg"
+      />
+      <FaqSchema items={faqItems} />
       <PageHero
         title="Vārtu un žogu atjaunošana"
         backgroundImage="/images/header-background.jpg"
@@ -55,6 +96,8 @@ export default function VartuAtjaunosanaPage() {
           <li>Iespēja izvēlēties jebkuru krāsu</li>
         </ul>
       </TextWithImage>
+
+      <FaqAccordion title="Biežāk uzdotie jautājumi" items={faqItems} />
 
       <section className="bg-pulver-grey section-padding">
         <div className="container text-center">

@@ -2,6 +2,7 @@ import { Metadata } from 'next';
 import { PageHero, TextBlock } from '@/components/content';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
+import BreadcrumbSchema from '@/components/BreadcrumbSchema';
 
 // Article content - in production this would come from Keystatic CMS
 const articles: Record<string, { title: string; content: string; date: string }> = {
@@ -139,8 +140,11 @@ export async function generateMetadata({ params }: { params: PageParams }): Prom
   }
 
   return {
-    title: `${article.title} | Pulverkrāsotava`,
+    title: article.title,
     description: `${article.title} - noderīga informācija par pulverkrāsošanu un metālapstrādi.`,
+    alternates: {
+      canonical: `/informacija/${slug}`,
+    },
   };
 }
 
@@ -158,6 +162,11 @@ export default async function ArticlePage({ params }: { params: PageParams }) {
 
   return (
     <>
+      <BreadcrumbSchema items={[
+        { name: 'Sākums', href: '/' },
+        { name: 'Informācija', href: '/informacija' },
+        { name: article.title, href: `/informacija/${slug}` },
+      ]} />
       <PageHero title={article.title} />
       <TextBlock>
         <div className="mb-6">

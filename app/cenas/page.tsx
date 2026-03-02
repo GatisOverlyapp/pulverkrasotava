@@ -1,10 +1,15 @@
 import { Metadata } from 'next';
-import { PageHero, TextBlock } from '@/components/content';
+import { PageHero, TextBlock, FaqAccordion } from '@/components/content';
 import Link from 'next/link';
+import BreadcrumbSchema from '@/components/BreadcrumbSchema';
+import FaqSchema from '@/components/FaqSchema';
 
 export const metadata: Metadata = {
-  title: 'Cenas',
-  description: 'Pulverkrāsošanas, smilšu strūklošanas un metālapstrādes cenas. Saņemiet individuālu piedāvājumu.',
+  title: 'Cenas - Pulverkrāsošanas un Metālapstrādes Izcenojums',
+  description: 'Pulverkrāsošanas, smilšu strūklošanas un metālapstrādes cenas Gulbenē, Vidzemē. Disku pulverkrāsošana no 5 EUR. Stundas likme 25 EUR/h. Zvaniet +371 26 102 841.',
+  alternates: {
+    canonical: '/cenas',
+  },
 };
 
 const wheelPrices = [
@@ -20,9 +25,37 @@ const wheelPrices = [
   { size: 'R22', price: '15.00 EUR' },
 ];
 
+const faqItems = [
+  {
+    question: 'Kā tiek noteikta cena pulverkrāsošanai?',
+    answer: 'Cena tiek noteikta individuāli katram projektam, ņemot vērā izstrādājuma izmērus, formas sarežģītību, virsmas stāvokli, krāsas veidu un daudzumu. Sazinieties ar mums precīzam izcenojumam.',
+  },
+  {
+    question: 'Vai cenā ir iekļauta virsmas sagatavošana?',
+    answer: 'Disku pulverkrāsošanas cenā ir iekļauta standarta virsmas sagatavošana. Citiem izstrādājumiem smilšu strūklošana tiek izcenota atsevišķi.',
+  },
+  {
+    question: 'Kāda ir minimālā pasūtījuma summa?',
+    answer: 'Minimālā pasūtījuma summa ir 50 EUR (bez PVN). Tas attiecas uz visiem pakalpojumiem.',
+  },
+  {
+    question: 'Vai cenas ir ar vai bez PVN?',
+    answer: 'Visas norādītās cenas ir bez PVN (21%). Fiziskām personām tiek piemērots PVN.',
+  },
+  {
+    question: 'Vai piedāvājat atlaides lieliem apjomiem?',
+    answer: 'Jā, lielākiem pasūtījumiem piedāvājam individuālas atlaides. Sazinieties ar mums, lai apspriestu jūsu projektu un saņemtu labāko piedāvājumu.',
+  },
+];
+
 export default function PricingPage() {
   return (
     <>
+      <BreadcrumbSchema items={[
+        { name: 'Sākums', href: '/' },
+        { name: 'Cenas', href: '/cenas' },
+      ]} />
+      <FaqSchema items={faqItems} />
       <PageHero title="Cenas" />
       <TextBlock>
         <h2>Mūsu pakalpojumu cenas</h2>
@@ -98,6 +131,9 @@ export default function PricingPage() {
           <li>Vēlamo izpildes termiņu</li>
         </ul>
       </TextBlock>
+
+      <FaqAccordion title="Biežāk uzdotie jautājumi par cenām" items={faqItems} />
+
       <section className="bg-pulver-grey section-padding">
         <div className="container text-center">
           <h2 className="text-pulver-light text-2xl md:text-3xl font-bold mb-6">

@@ -1,15 +1,23 @@
 import { Metadata } from 'next';
 import { PageHero, TextBlock } from '@/components/content';
 import { WhyChooseUs } from '@/components/home';
+import BreadcrumbSchema from '@/components/BreadcrumbSchema';
 
 export const metadata: Metadata = {
-  title: 'Par mums',
-  description: 'Uzziniet vairāk par Pulverkrāsotava - mūsu vēsturi, vērtībām un komandu.',
+  title: 'Par Mums - Pulverkrāsošana Gulbenē, Vidzemē',
+  description: 'Uzziniet vairāk par Pulverkrāsotava - profesionāla pulverkrāsošana, smilšu strūklošana un metālapstrāde Gulbenē, Vidzemē kopš 2018. gada.',
+  alternates: {
+    canonical: '/par-mums',
+  },
 };
 
 export default function AboutPage() {
   return (
     <>
+      <BreadcrumbSchema items={[
+        { name: 'Sākums', href: '/' },
+        { name: 'Par mums', href: '/par-mums' },
+      ]} />
       <PageHero title="Par mums" />
       <TextBlock>
         <h2>Pulverkrāsotava - Jūsu uzticamais partneris metāla apstrādē</h2>

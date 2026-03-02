@@ -1,6 +1,7 @@
 import { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import { BlogPost } from '@/components/content';
+import BreadcrumbSchema from '@/components/BreadcrumbSchema';
 
 // This will be replaced with Keystatic data fetching
 const posts = [
@@ -54,6 +55,9 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   return {
     title: post.metaTitle || post.title,
     description: post.metaDescription,
+    alternates: {
+      canonical: `/jaunumi/${slug}`,
+    },
   };
 }
 
@@ -67,6 +71,11 @@ export default async function BlogPostPage({ params }: PageProps) {
 
   return (
     <div className="pt-24">
+      <BreadcrumbSchema items={[
+        { name: 'Sākums', href: '/' },
+        { name: 'Jaunumi', href: '/jaunumi' },
+        { name: post.title, href: `/jaunumi/${slug}` },
+      ]} />
       <BlogPost
         title={post.title}
         content={<div dangerouslySetInnerHTML={{ __html: post.content }} />}

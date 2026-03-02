@@ -1,5 +1,5 @@
 export default function StructuredData() {
-  const structuredData = {
+  const localBusiness = {
     '@context': 'https://schema.org',
     '@type': 'LocalBusiness',
     '@id': 'https://pulverkrasotava.lv',
@@ -21,6 +21,16 @@ export default function StructuredData() {
       latitude: 57.1566,
       longitude: 26.7547,
     },
+    areaServed: [
+      {
+        '@type': 'State',
+        name: 'Vidzeme',
+      },
+      {
+        '@type': 'Country',
+        name: 'Latvija',
+      },
+    ],
     openingHoursSpecification: [
       {
         '@type': 'OpeningHoursSpecification',
@@ -91,10 +101,30 @@ export default function StructuredData() {
     },
   };
 
+  const webSite = {
+    '@context': 'https://schema.org',
+    '@type': 'WebSite',
+    name: 'Pulverkrāsotava',
+    url: 'https://pulverkrasotava.lv',
+    inLanguage: 'lv',
+    publisher: {
+      '@type': 'Organization',
+      name: 'Pulverkrāsotava',
+      legalName: 'SIA "AFREK"',
+      url: 'https://pulverkrasotava.lv',
+    },
+  };
+
   return (
-    <script
-      type="application/ld+json"
-      dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
-    />
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusiness) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(webSite) }}
+      />
+    </>
   );
 }

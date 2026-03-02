@@ -14,7 +14,7 @@ const footerLinks = [
 const socialLinks = [
   {
     name: 'Waze',
-    href: 'https://waze.com/ul?ll=56.9506,24.1086&navigate=yes',
+    href: 'https://waze.com/ul?ll=57.1566,26.7547&navigate=yes',
     icon: (
       <svg viewBox="0 0 32.3 32.3" fill="currentColor" className="w-8 h-8">
         <path d="M26.5,0H5.8C2.6,0,0,2.6,0,5.8v20.7c0,3.2,2.6,5.8,5.8,5.8h20.7c3.2,0,5.8-2.6,5.8-5.8V5.8C32.3,2.6,29.7,0,26.5,0z M30.7,26.5c0,2.3-1.9,4.1-4.1,4.1H5.8c-2.3,0-4.1-1.9-4.1-4.1V5.8c0-2.3,1.9-4.1,4.1-4.1h20.7c2.3,0,4.1,1.9,4.1,4.1V26.5z"/>

@@ -1,15 +1,56 @@
 import { Metadata } from 'next';
-import { PageHero, TextBlock, TextWithImage } from '@/components/content';
+import { PageHero, TextBlock, TextWithImage, FaqAccordion } from '@/components/content';
 import Link from 'next/link';
+import BreadcrumbSchema from '@/components/BreadcrumbSchema';
+import ServiceSchema from '@/components/ServiceSchema';
+import FaqSchema from '@/components/FaqSchema';
 
 export const metadata: Metadata = {
-  title: 'Metāla konstrukcijas | Pulverkrāsotava',
-  description: 'Metāla konstrukciju izgatavošana un metāla izstrādājumi pēc individuāla pasūtījuma. Kāpnes, margas, vārti, žogi.',
+  title: 'Metāla Konstrukcijas - Izgatavošana pēc Pasūtījuma',
+  description: 'Metāla konstrukciju izgatavošana Gulbenē, Vidzemē - kāpnes, margas, vārti, žogi pēc individuāla pasūtījuma. Zvaniet +371 26 102 841.',
+  alternates: {
+    canonical: '/pakalpojumi/metala-konstrukciju-izgatavosana-metala-izstradajumi',
+  },
 };
+
+const faqItems = [
+  {
+    question: 'Kādas metāla konstrukcijas varat izgatavot?',
+    answer: 'Izgatavosim jebkura veida metāla konstrukcijas - kāpnes, margas, balkonu nožogojumus, vārtus, žogus, nojumes, auto nojumes, terases un citas konstrukcijas pēc individuāla projekta.',
+  },
+  {
+    question: 'Vai piedāvājat arī montāžu?',
+    answer: 'Jā, piedāvājam pilnu servisu - no projekta izstrādes un izgatavošanas līdz montāžai jūsu objektā. Iespējama arī pulverkrāsošana pirms montāžas.',
+  },
+  {
+    question: 'Kā notiek pasūtīšanas process?',
+    answer: 'Vispirms apspriežam jūsu ideju un veicam uzmērīšanu. Tad sagatavojam projektu un piedāvājumu. Pēc apstiprināšanas sākam izgatavošanu un veicam montāžu.',
+  },
+  {
+    question: 'Kādi materiāli tiek izmantoti?',
+    answer: 'Izmantojam dažādu veidu tēraudu, nerūsējošo tēraudu un alumīniju. Materiāla izvēle tiek pielāgota konkrētajam projektam un ekspluatācijas apstākļiem.',
+  },
+  {
+    question: 'Vai varat izgatavot arī nestandarta izmēru konstrukcijas?',
+    answer: 'Jā, katrs projekts tiek izgatavots individuāli pēc jūsu izmēriem un vēlmēm. Mēs neizmantojam standarta šablonus - katra konstrukcija ir unikāla.',
+  },
+];
 
 export default function MetalaKonstrukcijasPage() {
   return (
     <>
+      <BreadcrumbSchema items={[
+        { name: 'Sākums', href: '/' },
+        { name: 'Pakalpojumi', href: '/pakalpojumi' },
+        { name: 'Metāla konstrukcijas', href: '/pakalpojumi/metala-konstrukciju-izgatavosana-metala-izstradajumi' },
+      ]} />
+      <ServiceSchema
+        name="Metāla konstrukciju izgatavošana"
+        description="Metāla konstrukciju izgatavošana pēc individuāla pasūtījuma - kāpnes, margas, vārti, žogi, nojumes."
+        url="/pakalpojumi/metala-konstrukciju-izgatavosana-metala-izstradajumi"
+        image="/images/services/konstrukcijas-1.jpg"
+      />
+      <FaqSchema items={faqItems} />
       <PageHero
         title="Metāla konstrukcijas"
         backgroundImage="/images/header-background.jpg"
@@ -57,6 +98,8 @@ export default function MetalaKonstrukcijasPage() {
           <li>Konkurētspējīgas cenas</li>
         </ul>
       </TextWithImage>
+
+      <FaqAccordion title="Biežāk uzdotie jautājumi" items={faqItems} />
 
       <section className="bg-pulver-grey section-padding">
         <div className="container text-center">

@@ -1,9 +1,13 @@
 import { Metadata } from 'next';
 import { PageHero, BlogGrid } from '@/components/content';
+import BreadcrumbSchema from '@/components/BreadcrumbSchema';
 
 export const metadata: Metadata = {
   title: 'Jaunumi',
   description: 'Pulverkrāsotava jaunumi - raksti par pulverkrāsošanu, metālapstrādi un mūsu projektiem.',
+  alternates: {
+    canonical: '/jaunumi',
+  },
 };
 
 // This will be replaced with Keystatic data fetching
@@ -27,6 +31,10 @@ const posts = [
 export default function BlogPage() {
   return (
     <>
+      <BreadcrumbSchema items={[
+        { name: 'Sākums', href: '/' },
+        { name: 'Jaunumi', href: '/jaunumi' },
+      ]} />
       <PageHero title="Jaunumi" />
       <BlogGrid posts={posts} />
     </>

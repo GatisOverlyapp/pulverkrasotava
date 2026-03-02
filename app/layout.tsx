@@ -3,6 +3,7 @@ import "./globals.css";
 import { Header, Footer, SocialSidebar } from "@/components/layout";
 import StructuredData from "@/components/StructuredData";
 import GoogleAnalytics from "@/components/GoogleAnalytics";
+import FacebookPixel from "@/components/FacebookPixel";
 
 export const metadata: Metadata = {
   title: {
@@ -16,6 +17,9 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://pulverkrasotava.lv"),
   alternates: {
     canonical: "/",
+    languages: {
+      "lv": "https://pulverkrasotava.lv",
+    },
   },
   openGraph: {
     type: "website",
@@ -50,9 +54,6 @@ export const metadata: Metadata = {
       "max-snippet": -1,
     },
   },
-  verification: {
-    google: "your-google-verification-code", // Replace with actual verification code
-  },
 };
 
 export default function RootLayout({
@@ -67,6 +68,7 @@ export default function RootLayout({
       </head>
       <body className="antialiased">
         <GoogleAnalytics measurementId="G-T348P4H857" />
+        <FacebookPixel pixelId="1719152665093276" />
         <Header />
         <SocialSidebar />
         <main>{children}</main>

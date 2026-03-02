@@ -2,10 +2,14 @@ import { Metadata } from 'next';
 import { PageHero } from '@/components/content';
 import Image from 'next/image';
 import Link from 'next/link';
+import BreadcrumbSchema from '@/components/BreadcrumbSchema';
 
 export const metadata: Metadata = {
-  title: 'Pakalpojumi | Pulverkrāsotava',
-  description: 'Pulverkrāsotava piedāvā pulverkrāsošanu, smilšu strūklošanu, metālapstrādi, metāla konstrukciju izgatavošanu, mēbeļu izgatavošanu un vārtu atjaunošanu.',
+  title: 'Pakalpojumi - Pulverkrāsošana, Metālapstrāde, Smilšu Strūkla',
+  description: 'Pulverkrāsotava piedāvā pulverkrāsošanu, smilšu strūklošanu, metālapstrādi, metāla konstrukciju izgatavošanu, mēbeļu izgatavošanu un vārtu atjaunošanu Gulbenē, Vidzemē. Zvaniet +371 26 102 841.',
+  alternates: {
+    canonical: '/pakalpojumi',
+  },
 };
 
 const services = [
@@ -50,6 +54,10 @@ const services = [
 export default function ServicesPage() {
   return (
     <>
+      <BreadcrumbSchema items={[
+        { name: 'Sākums', href: '/' },
+        { name: 'Pakalpojumi', href: '/pakalpojumi' },
+      ]} />
       <PageHero title="Mūsu pakalpojumi" />
       <section id="services" className="bg-pulver-dark section-padding">
         <div className="container">
@@ -63,7 +71,7 @@ export default function ServicesPage() {
                 <div className="w-20 h-20 mx-auto mb-6 flex items-center justify-center">
                   <Image
                     src={service.icon}
-                    alt=""
+                    alt={service.title}
                     width={80}
                     height={80}
                     className="w-full h-full object-contain filter brightness-0 invert group-hover:brightness-0 group-hover:invert-0 transition-all"

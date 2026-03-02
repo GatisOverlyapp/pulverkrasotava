@@ -1,14 +1,22 @@
 import { Metadata } from 'next';
 import { PageHero, TextBlock } from '@/components/content';
+import BreadcrumbSchema from '@/components/BreadcrumbSchema';
 
 export const metadata: Metadata = {
   title: 'Lietošanas noteikumi',
   description: 'Pulverkrāsotava vietnes lietošanas noteikumi.',
+  alternates: {
+    canonical: '/lietosanas-noteikumi',
+  },
 };
 
 export default function TermsPage() {
   return (
     <>
+      <BreadcrumbSchema items={[
+        { name: 'Sākums', href: '/' },
+        { name: 'Lietošanas noteikumi', href: '/lietosanas-noteikumi' },
+      ]} />
       <PageHero title="Lietošanas noteikumi" />
       <TextBlock>
         <h2>Vietnes lietošanas noteikumi</h2>

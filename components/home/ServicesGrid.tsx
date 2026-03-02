@@ -55,7 +55,7 @@ export default function ServicesGrid({
               <div className="w-20 h-20 mx-auto mb-6 flex items-center justify-center">
                 <Image
                   src={service.icon}
-                  alt=""
+                  alt={service.title}
                   width={80}
                   height={80}
                   className="w-full h-full object-contain filter brightness-0 invert group-hover:brightness-0 group-hover:invert-0 transition-all"

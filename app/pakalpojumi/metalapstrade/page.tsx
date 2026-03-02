@@ -1,15 +1,56 @@
 import { Metadata } from 'next';
-import { PageHero, TextBlock, TextWithImage } from '@/components/content';
+import { PageHero, TextBlock, TextWithImage, FaqAccordion } from '@/components/content';
 import Link from 'next/link';
+import BreadcrumbSchema from '@/components/BreadcrumbSchema';
+import ServiceSchema from '@/components/ServiceSchema';
+import FaqSchema from '@/components/FaqSchema';
 
 export const metadata: Metadata = {
-  title: 'Metālapstrāde | Pulverkrāsotava',
-  description: 'Profesionāla metālapstrāde - griešana, locīšana, metināšana un citi metāla apstrādes pakalpojumi.',
+  title: 'Metālapstrāde - Griešana, Locīšana, Metināšana',
+  description: 'Profesionāla metālapstrāde Gulbenē, Vidzemē - griešana, locīšana, metināšana un citi metāla apstrādes pakalpojumi. Zvaniet +371 26 102 841.',
+  alternates: {
+    canonical: '/pakalpojumi/metalapstrade',
+  },
 };
+
+const faqItems = [
+  {
+    question: 'Kādus metālapstrādes pakalpojumus piedāvājat?',
+    answer: 'Piedāvājam metāla griešanu, locīšanu, MIG/MAG un TIG metināšanu, slīpēšanu, urbšanu un citus metālapstrādes darbus. Varam apstrādāt dažāda veida metālus.',
+  },
+  {
+    question: 'Vai varat izgatavot pēc maniem rasējumiem?',
+    answer: 'Jā, mēs izgatavosim metāla izstrādājumus pēc jūsu rasējumiem vai skicēm. Varat arī aprakstīt savu ideju, un mūsu speciālisti palīdzēs to realizēt.',
+  },
+  {
+    question: 'Kāds ir minimālais pasūtījuma apjoms?',
+    answer: 'Minimālā pasūtījuma summa ir 50 EUR (bez PVN). Mēs izpildām gan viena izstrādājuma pasūtījumus, gan sērijveida ražošanu.',
+  },
+  {
+    question: 'Vai piedāvājat arī pulverkrāsošanu pēc metālapstrādes?',
+    answer: 'Jā, mēs piedāvājam pilnu servisu - no metālapstrādes līdz smilšu strūklošanai un pulverkrāsošanai. Tas ietaupa jūsu laiku un nodrošina labāku gala rezultātu.',
+  },
+  {
+    question: 'Cik ilgi aizņem metālapstrādes darbi?',
+    answer: 'Izpildes laiks atkarīgs no darba sarežģītības un apjoma. Vienkārši darbi tiek izpildīti 1-3 dienu laikā, sarežģītāki projekti - 1-2 nedēļu laikā.',
+  },
+];
 
 export default function MetalapstradePage() {
   return (
     <>
+      <BreadcrumbSchema items={[
+        { name: 'Sākums', href: '/' },
+        { name: 'Pakalpojumi', href: '/pakalpojumi' },
+        { name: 'Metālapstrāde', href: '/pakalpojumi/metalapstrade' },
+      ]} />
+      <ServiceSchema
+        name="Metālapstrāde"
+        description="Profesionāla metālapstrāde - griešana, locīšana, metināšana un citi metāla apstrādes pakalpojumi."
+        url="/pakalpojumi/metalapstrade"
+        image="/images/services/metalapstrade-1.jpg"
+      />
+      <FaqSchema items={faqItems} />
       <PageHero
         title="Metālapstrāde"
         backgroundImage="/images/header-background.jpg"
@@ -57,6 +98,8 @@ export default function MetalapstradePage() {
           <li>Individuāli projekti pēc pasūtījuma</li>
         </ul>
       </TextWithImage>
+
+      <FaqAccordion title="Biežāk uzdotie jautājumi" items={faqItems} />
 
       <section className="bg-pulver-grey section-padding">
         <div className="container text-center">

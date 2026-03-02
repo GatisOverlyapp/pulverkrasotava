@@ -1,15 +1,56 @@
 import { Metadata } from 'next';
-import { PageHero, TextBlock, TextWithImage } from '@/components/content';
+import { PageHero, TextBlock, TextWithImage, FaqAccordion } from '@/components/content';
 import Link from 'next/link';
+import BreadcrumbSchema from '@/components/BreadcrumbSchema';
+import ServiceSchema from '@/components/ServiceSchema';
+import FaqSchema from '@/components/FaqSchema';
 
 export const metadata: Metadata = {
-  title: 'Smilšu strūklošana | Pulverkrāsotava',
-  description: 'Profesionāla smilšu strūklošana metāla virsmu sagatavošanai. Rūsas, vecās krāsas un netīrumu noņemšana.',
+  title: 'Smilšu Strūklošana - Metāla Virsmu Sagatavošana',
+  description: 'Profesionāla smilšu strūklošana Gulbenē, Vidzemē. Rūsas, vecās krāsas un netīrumu noņemšana. Virsmu sagatavošana pulverkrāsošanai. Zvaniet +371 26 102 841.',
+  alternates: {
+    canonical: '/pakalpojumi/smilsu-strukla-smilsu-struklosana',
+  },
 };
+
+const faqItems = [
+  {
+    question: 'Kas ir smilšu strūklošana?',
+    answer: 'Smilšu strūklošana (abrazīvā strūklošana) ir metāla virsmu tīrīšanas metode, kurā abrazīvās daļiņas ar lielu ātrumu tiek virzītas uz apstrādājamo virsmu, noņemot rūsu, veco krāsu un netīrumus.',
+  },
+  {
+    question: 'Kāpēc ir nepieciešama smilšu strūklošana pirms pulverkrāsošanas?',
+    answer: 'Smilšu strūklošana nodrošina tīru un raupju virsmu, uz kuras pulverkrāsa daudz labāk saķeras. Tas garantē ilgmūžīgāku un kvalitatīvāku pārklājumu.',
+  },
+  {
+    question: 'Kādus materiālus var strūklot?',
+    answer: 'Strūklot var jebkurus metāla izstrādājumus - tēraudu, alumīniju, čugunu un citus metālus. Metode ir piemērota gan maziem, gan lieliem izstrādājumiem.',
+  },
+  {
+    question: 'Cik maksā smilšu strūklošana?',
+    answer: 'Cena ir atkarīga no virsmas stāvokļa un laukuma. Standarta tīrīšana sākas no 10-20 EUR/m², intensīva rūsas noņemšana no 15-25 EUR/m². Sazinieties ar mums precīzam izcenojumam.',
+  },
+  {
+    question: 'Vai var strūklot uz vietas?',
+    answer: 'Mūsu strūklošanas iekārtas atrodas mūsu darbnīcā Gulbenē. Izstrādājumus var atvest pie mums vai arī varam organizēt transportu.',
+  },
+];
 
 export default function SmilsuStruklosanaPage() {
   return (
     <>
+      <BreadcrumbSchema items={[
+        { name: 'Sākums', href: '/' },
+        { name: 'Pakalpojumi', href: '/pakalpojumi' },
+        { name: 'Smilšu strūklošana', href: '/pakalpojumi/smilsu-strukla-smilsu-struklosana' },
+      ]} />
+      <ServiceSchema
+        name="Smilšu strūklošana"
+        description="Profesionāla smilšu strūklošana metāla virsmu sagatavošanai. Rūsas, vecās krāsas un netīrumu pilnīga noņemšana."
+        url="/pakalpojumi/smilsu-strukla-smilsu-struklosana"
+        image="/images/services/smilsu-strukla-1.jpg"
+      />
+      <FaqSchema items={faqItems} />
       <PageHero
         title="Smilšu strūklošana"
         backgroundImage="/images/header-background.jpg"
@@ -57,6 +98,8 @@ export default function SmilsuStruklosanaPage() {
           <li>Fasādes elementiem</li>
         </ul>
       </TextWithImage>
+
+      <FaqAccordion title="Biežāk uzdotie jautājumi" items={faqItems} />
 
       <section className="bg-pulver-grey section-padding">
         <div className="container text-center">

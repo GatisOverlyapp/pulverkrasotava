@@ -1,10 +1,14 @@
 import { Metadata } from 'next';
 import { PageHero } from '@/components/content';
 import Link from 'next/link';
+import BreadcrumbSchema from '@/components/BreadcrumbSchema';
 
 export const metadata: Metadata = {
-  title: 'Informācija | Pulverkrāsotava',
-  description: 'Noderīga informācija par pulverkrāsošanu, smilšu strūklošanu un metālapstrādi. Padomi un ieteikumi.',
+  title: 'Informācija - Padomi par Pulverkrāsošanu un Metālapstrādi',
+  description: 'Noderīga informācija par pulverkrāsošanu, smilšu strūklošanu un metālapstrādi. Padomi un ieteikumi no Pulverkrāsotava speciālistiem.',
+  alternates: {
+    canonical: '/informacija',
+  },
 };
 
 const articles = [
@@ -37,6 +41,10 @@ const articles = [
 export default function InformacijaPage() {
   return (
     <>
+      <BreadcrumbSchema items={[
+        { name: 'Sākums', href: '/' },
+        { name: 'Informācija', href: '/informacija' },
+      ]} />
       <PageHero title="Informācija" />
       <section id="content" className="bg-pulver-dark section-padding">
         <div className="container">

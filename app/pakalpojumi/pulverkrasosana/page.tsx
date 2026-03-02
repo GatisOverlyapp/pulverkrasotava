@@ -1,15 +1,56 @@
 import { Metadata } from 'next';
-import { PageHero, TextBlock, TextWithImage } from '@/components/content';
+import { PageHero, TextBlock, TextWithImage, FaqAccordion } from '@/components/content';
 import Link from 'next/link';
+import BreadcrumbSchema from '@/components/BreadcrumbSchema';
+import ServiceSchema from '@/components/ServiceSchema';
+import FaqSchema from '@/components/FaqSchema';
 
 export const metadata: Metadata = {
-  title: 'Pulverkrāsošana | Pulverkrāsotava',
-  description: 'Profesionāla pulverkrāsošana Latvijā. Izturīgs un ilgmūžīgs pārklājums metāla izstrādājumiem ar plašu RAL krāsu izvēli.',
+  title: 'Pulverkrāsošana - Profesionāls Metāla Pārklājums',
+  description: 'Profesionāla pulverkrāsošana Gulbenē, Vidzemē. Izturīgs un ilgmūžīgs pārklājums metāla izstrādājumiem ar plašu RAL krāsu izvēli. Zvaniet +371 26 102 841.',
+  alternates: {
+    canonical: '/pakalpojumi/pulverkrasosana',
+  },
 };
+
+const faqItems = [
+  {
+    question: 'Kas ir pulverkrāsošana?',
+    answer: 'Pulverkrāsošana ir moderna metāla virsmu apstrādes tehnoloģija, kurā sausas krāsas pulvera daļiņas tiek elektrostatiski uzklātas uz metāla virsmas un pēc tam sacietētas krāsnī 160-200°C temperatūrā, veidojot izturīgu, vienmērīgu pārklājumu.',
+  },
+  {
+    question: 'Cik ilgi kalpo pulverkrāsojums?',
+    answer: 'Kvalitatīvs pulverkrāsojums kalpo 15-20 gadus un vairāk, atkarībā no ekspluatācijas apstākļiem. Tas ir ievērojami ilgāk nekā tradicionālā krāsošana.',
+  },
+  {
+    question: 'Kādas krāsas ir pieejamas?',
+    answer: 'Piedāvājam visas RAL kataloga krāsas, kā arī metāliskās, matētās, spīdīgās un struktūras faktūras. Kopā pieejamas vairāk nekā 2500 krāsu toņu.',
+  },
+  {
+    question: 'Ko var pulverkrāsot?',
+    answer: 'Pulverkrāsot var jebkurus metāla izstrādājumus - auto diskus, vārtus, žogus, margas, mēbeles, fasādes elementus, rūpnieciskās iekārtas un daudz ko citu.',
+  },
+  {
+    question: 'Cik ātri tiek izpildīts pasūtījums?',
+    answer: 'Standarta pasūtījumi tiek izpildīti 3-5 darba dienu laikā. Steidzamiem pasūtījumiem piedāvājam paātrinātu izpildi. Precīzs termiņš atkarīgs no apjoma un sarežģītības.',
+  },
+];
 
 export default function PulverkrasosanaPage() {
   return (
     <>
+      <BreadcrumbSchema items={[
+        { name: 'Sākums', href: '/' },
+        { name: 'Pakalpojumi', href: '/pakalpojumi' },
+        { name: 'Pulverkrāsošana', href: '/pakalpojumi/pulverkrasosana' },
+      ]} />
+      <ServiceSchema
+        name="Pulverkrāsošana"
+        description="Profesionāla pulverkrāsošana ar plašu RAL krāsu izvēli. Izturīgs un ilgmūžīgs pārklājums metāla izstrādājumiem."
+        url="/pakalpojumi/pulverkrasosana"
+        image="/images/services/pulverkrasosana-1.jpg"
+      />
+      <FaqSchema items={faqItems} />
       <PageHero
         title="Pulverkrāsošana"
         backgroundImage="/images/header-background.jpg"
@@ -57,6 +98,8 @@ export default function PulverkrasosanaPage() {
           <li>Sporta aprīkojums</li>
         </ul>
       </TextWithImage>
+
+      <FaqAccordion title="Biežāk uzdotie jautājumi" items={faqItems} />
 
       <section className="bg-pulver-grey section-padding">
         <div className="container text-center">
